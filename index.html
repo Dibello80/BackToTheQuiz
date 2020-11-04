@@ -10,17 +10,16 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    
     <!-- Backgounr picture loaded-->
     <img id="wallpaper" src="DeLoreanBg.jpg" alt="quiz_background">
     <!-- start Quiz button -->
-    <div class="start_btn"><button>START QUIZ</button></div>
+    <div class="start_btn" id="start__quiz"><button>START QUIZ</button></div>
 
     <!-- Info Box -->
     <div class="info_box">
         <div class="info-title"><span>BACK TO THE...&nbsp; &nbsp; &nbsp;Quiz Rules!</span></div>
         <div class="info-list">
-            <div class="info">1. You have only <span>30 SECONDS</span> to answer all questions.</div>
+            <div class="info">1. You have only <span>60 seconds</span> to answer all questions.</div>
             <div class="info">2. Once you select your answer, it can't be undone.</div>
             <div class="info">3. If your answer isn't correct you will lose seconds.</div>
             <div class="info">4. You can't exit from the Quiz while you're playing.</div>
@@ -38,7 +37,7 @@
             <div class="title"><em><strong>BACK TO THE QUIZ!</strong></em></div>
             <div class="timer">
                 <div class="time_left_txt">Time Left</div>
-                <div class="timer_sec">30</div>
+                <div class="timer_sec">60</div>
             </div>
             <div class="time_line"></div>
         </header>
@@ -72,9 +71,20 @@
         <div class="buttons">
             <button class="restart">REPLAY</button>
             <button class="quit">QUIT</button>
-            <button class="score">SCORE</button>
+            <button class="score">SUBMIT</button>
         </div>
     </div>
+    
+    <!-- Hidden Player -->
+    
+    <audio id="background__music" style="display:none" controls loop autoplay>
+      <source src="BackSound.ogg" type="audio/ogg">
+      <source src="BackSound.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <!-- function on script.js line 14 -->
+    
+    <!-- Hidden Player -->
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="js/questions.js"></script>

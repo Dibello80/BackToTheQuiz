@@ -1,12 +1,7 @@
 //selecting all required elements
-
-//Start Quiz
 const start_btn = document.querySelector(".start_btn button");
-// Rules Box
 const info_box = document.querySelector(".info_box");
-//Quit
 const exit_btn = info_box.querySelector(".buttons .quit");
-//Restart
 const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
@@ -14,13 +9,20 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
-const scoreSubmit = document.querySelector(".score");
-
 
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
+    
+    var music = document.querySelector("#background__music")
+    music.play()
+
+    /*use this code below if you want to stop the music */
+    /*
+    music.pause();
+    music.currentTime = 0;
+    */
 }
 
 // if exitQuiz button clicked
@@ -28,23 +30,26 @@ exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
 }
 
+
+
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
-    startTimer(30); //calling startTimer function
+    startTimer(60); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
 
-let timeValue =  30;
+let timeValue =  60;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
+let looseTime  = 5;
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
@@ -53,7 +58,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 30; 
+    timeValue = 60; 
     que_count = 0;
     que_numb = 1;
     userScore = 0;
@@ -139,6 +144,19 @@ function optionSelected(answer){
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
 
+        // here is where you loose time if the answer is wrong and you have the red timer animation going 
+        
+        timeValue = timeValue - looseTime 
+        
+        document.querySelector(".timer").style.background = "red"
+        document.querySelector(".timer").className += " tada animated"
+        setTimeout(function(){ 
+            document.querySelector(".timer").style.background = "#cce5ff"
+            document.querySelector(".timer").className =
+            document.querySelector(".timer").className.replace(new RegExp('(?:^|\\s)'+ 'tada' + '(?:\\s|$)'), ' ').replace(new RegExp('(?:^|\\s)'+ 'animated' + '(?:\\s|$)'), ' ')
+        }, 300);
+        
+        widthValue = widthValue + (document.querySelector("header").offsetWidth / 60)*looseTime
 
         for(i=0; i < allOptions; i++){
             if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer 
@@ -177,8 +195,9 @@ function showResult(){
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
+        time = getTime()
         timeCount.textContent = time; //changing the value of timeCount with time value
-        time--; //decrement the time value
+        timeValue--; //decrement the time value
         if(time < 9){ //if timer is less than 9
             let addZero = timeCount.textContent; 
             timeCount.textContent = "0" + addZero; //add a 0 before time value
@@ -203,14 +222,29 @@ function startTimer(time){
     }
 }
 
-function startTimerLine(time){
-    counterLine = setInterval(timer, 57.4);
+function getTime() {
+    return timeValue
+}
+
+function getValueLine() {
+    return widthValue
+}
+
+function startTimerLine(valueLine){
+    counterLine = setInterval(timer, 500);
     function timer(){
-        time += 1; //upgrading time value with 1
-        time_line.style.width = time + "px"; //increasing width of time_line with px by time value
-        if(time > 549){ //if time value is greater than 549(Box edge)
-            clearInterval(counterLine); //clear counterLine
+        valueLine = getValueLine()
+        valueLine += document.querySelector("header").offsetWidth / 120
+        widthValue = valueLine
+        
+        if(valueLine > document.querySelector("header").offsetWidth ){
+            clearInterval(counterLine);
+            time_line.style.width = valueLine + "px";
+            widthValue = 0
+        } else {
+            time_line.style.width = valueLine + "px";
         }
+        
     }
 }
 
