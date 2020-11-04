@@ -40,12 +40,12 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color: #007bff;
+    color: black;
     padding: 15px 30px;
-    outline: none;
-    border: none;
+    /* outline: none; */
+    /* border: none; */
     border-radius: 5px;
-    background: #fff;
+    background: rgb(231, 228, 37);
     cursor: pointer;
 }
 
@@ -62,7 +62,7 @@ body{
 .info_box .info-title{
     height: 60px;
     width: 100%;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid lightgray;
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -82,7 +82,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #ff3300;
 }
 .info_box .buttons{
     height: 60px;
@@ -133,6 +133,7 @@ body{
 .quiz_box header .title{
     font-size: 20px;
     font-weight: 600;
+    color:#f3de21;
 }
 
 .quiz_box header .timer{

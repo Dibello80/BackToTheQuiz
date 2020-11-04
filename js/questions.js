@@ -14,7 +14,7 @@ let questions = [
   },
     {
     numb: 2,
-    question: "What is 'Doc' Brown's first name? ",
+    question: "What is 'Doc' Brown's first name?",
     answer: "Emmett",
     options: [
       "Jules",
