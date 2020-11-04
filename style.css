@@ -1,5 +1,5 @@
 /* importing google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -44,8 +44,8 @@ body{
     padding: 15px 30px;
     /* outline: none; */
     /* border: none; */
-    border-radius: 5px;
-    background: rgb(231, 228, 37);
+    border-radius: auto;
+    background: #fff;
     cursor: pointer;
 }
 
@@ -133,7 +133,7 @@ body{
 .quiz_box header .title{
     font-size: 20px;
     font-weight: 600;
-    color:#f3de21;
+    color:#b8a500;
 }
 
 .quiz_box header .timer{
