@@ -28,6 +28,9 @@ start_btn.onclick = ()=>{
 // if exitQuiz button clicked
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
+    var music = document.querySelector("#background__music")
+    music.pause(); //music pause
+    music.currentTime = 0; //reset
 }
 
 

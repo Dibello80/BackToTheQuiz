@@ -19,7 +19,7 @@ body {
       
 }
 
-/* losing seconds animation starts here */
+/* losing seconds red time box animation starts here */
 
 .animated {
     -webkit-animation-duration: .5s;
@@ -94,7 +94,7 @@ body {
     animation-name: tada;
 }
 
-/* losing seconds animation ends here */
+/* losing seconds red time box animation ends here */
 
 
 ::-moz-selection {
@@ -569,3 +569,7 @@ footer button.show {
     background: #fff;
 }
 
+.buttons button.score:hover {
+    color: #fff;
+    background: #007bff;
+}
