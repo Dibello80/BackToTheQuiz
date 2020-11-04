@@ -8,8 +8,9 @@ let questions = [
     options: [
       "Barty McFly",
       "Farty McFLy",
-      "Marty McFly",
-      "McFly TheFly"
+      "McFly TheFly",
+      "Marty McFly"
+      
     ]
   },
     {
@@ -18,8 +19,8 @@ let questions = [
     answer: "Emmett",
     options: [
       "Jules",
-      "Verne",
       "Emmett",
+      "Verne",
       "Tommy"
     ]
   },
@@ -39,10 +40,10 @@ let questions = [
     question: "How many gigawatts does it take to power the Time Machine's flux capacitor?",
     answer: "1.51 gigawatts",
     options: [
-      "88 gigawatts",
+      "1.51 gigawatts",
       "1.21 gigawatts",
       "55 gigawatts",
-      "1.51 gigawatts"
+      "88 gigawatts"
     ]
   },
     {

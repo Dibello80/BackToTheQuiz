@@ -11,6 +11,11 @@ body{
     background: black;
 }
 
+#wallpaper {
+    width: 100%;
+    height: 1000px; 
+      
+}
 ::selection{
     color: #fff;
     background: #007bff;
@@ -388,7 +393,3 @@ footer button.show{
     background: #fff;
 }
 
-#wallpaper {
-    position: relative;
-    inline-size: auto;
-}

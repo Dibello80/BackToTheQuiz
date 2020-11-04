@@ -1,7 +1,12 @@
 //selecting all required elements
+
+//Start Quiz
 const start_btn = document.querySelector(".start_btn button");
+// Rules Box
 const info_box = document.querySelector(".info_box");
+//Quit
 const exit_btn = info_box.querySelector(".buttons .quit");
+//Restart
 const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
