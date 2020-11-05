@@ -9,7 +9,7 @@ You can't exit from the Quiz while you're playing and you will get 1 point for e
 When times is out or if you have answered all five questions the quiz will stop and you will have a new window with your score result.
 In the score window you have three buttons with three diffent options, "Replay", "Quit" or "Score".
 "Replay" button cliked to play another round, "Quit" to go back to the main page and "Score" if you want to store your result (localstorage).
-"Back To The Quiz" is mobile responsive. Enjoy!
+
 
 <strong>Play now!</strong> => : https://dibello80.github.io/BackToTheQuiz/
 
