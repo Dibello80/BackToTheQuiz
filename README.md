@@ -16,7 +16,7 @@ In the score window you have three buttons with three diffent options, "Replay",
 ## ScreenShot of the app!
 
 The following image shows the web application's appearance:
-![myimage-alt-tag]
+![myimage-alt-tag]/screeshot_app/Screen Shot_1.png
 
 
 
