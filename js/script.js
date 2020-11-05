@@ -18,7 +18,7 @@ start_btn.onclick = ()=>{
     var music = document.querySelector("#background__music")
     music.play()
 
-    /*use this code below if you want to stop the music */
+    /*se vuoi stoppare puoi usare le due righe sotto*/
     /*
     music.pause();
     music.currentTime = 0;
@@ -33,7 +33,9 @@ exit_btn.onclick = ()=>{
     music.currentTime = 0; //reset
 }
 
-
+document.querySelector(".score").onclick = ()=>{
+    saveStore(userScore + "/" + questions.length)
+}
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
@@ -146,10 +148,8 @@ function optionSelected(answer){
         answer.classList.add("incorrect"); //adding red color to correct selected option
         answer.insertAdjacentHTML("beforeend", crossIconTag); //adding cross icon to correct selected option
         console.log("Wrong Answer");
-
-        // here is where you loose time if the answer is wrong and you have the red timer animation going 
         
-        timeValue = timeValue - looseTime 
+        timeValue = timeValue - looseTime
         
         document.querySelector(".timer").style.background = "red"
         document.querySelector(".timer").className += " tada animated"
@@ -179,6 +179,11 @@ function showResult(){
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
+    
+    widthValue = 0
+    time_line.style.width = widthValue + "px";
+    clearInterval(counterLine)
+    
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
@@ -201,11 +206,8 @@ function startTimer(time){
         time = getTime()
         timeCount.textContent = time; //changing the value of timeCount with time value
         timeValue--; //decrement the time value
-        if(time < 9){ //if timer is less than 9
-            let addZero = timeCount.textContent; 
-            timeCount.textContent = "0" + addZero; //add a 0 before time value
-        }
-        if(time < 0){ //if timer is less than 0
+       
+        if(time <= 0){ //if timer is less than 0
             clearInterval(counter); //clear counter
             timeText.textContent = "Time Off"; //change the time text to time off
             const allOptions = option_list.children.length; //getting all option items
@@ -221,6 +223,7 @@ function startTimer(time){
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
             next_btn.classList.add("show"); //show the next button if user selected any option
+            showResult()
         }
     }
 }
@@ -240,7 +243,7 @@ function startTimerLine(valueLine){
         valueLine += document.querySelector("header").offsetWidth / 120
         widthValue = valueLine
         
-        if(valueLine > document.querySelector("header").offsetWidth ){
+        if(valueLine > document.querySelector("header").offsetWidth  ){
             clearInterval(counterLine);
             time_line.style.width = valueLine + "px";
             widthValue = 0
@@ -257,3 +260,12 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
+function saveStore(theScore) {
+    localStorage.setItem("score", theScore);
+    
+    if (localStorage.getItem("score")) {
+        let scoreText = '<p><span>the last score saved is:' + userScore + '/' + questions.length +'</span></p>';
+        document.querySelector(".highest__score").innerHTML = scoreText; 
+    }
+    
+}
