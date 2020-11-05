@@ -13,3 +13,14 @@ In the score window you have three buttons with three diffent options, "Replay",
 "Replay" button cliked to play another round, "Quit" to go back to the main page and if you click "Score" you can save your result to the localstorage.
 
 
+## ScreenShot of the app!
+
+The following image shows the web application's appearance:
+![myimage-alt-tag]
+
+
+
+## Credits
+
+© 2020 Angelo Rocky Dibello - Web Developer
+
