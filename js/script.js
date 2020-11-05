@@ -11,6 +11,7 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
 
+
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -18,11 +19,6 @@ start_btn.onclick = ()=>{
     var music = document.querySelector("#background__music")
     music.play()
 
-    /*se vuoi stoppare puoi usare le due righe sotto*/
-    /*
-    music.pause();
-    music.currentTime = 0;
-    */
 }
 
 // if exitQuiz button clicked
@@ -59,6 +55,7 @@ let looseTime  = 5;
 const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
+
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
@@ -83,20 +80,17 @@ quit_quiz.onclick = ()=>{
     window.location.reload(); //reload the current window
 }
 
+
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
+// if Next button clicked
 next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){ //if question count is less than total question length
         que_count++; //increment the que_count value
         que_numb++; //increment the que_numb value
         showQuetions(que_count); //calling showQestions function
         queCounter(que_numb); //passing que_numb value to queCounter
-        // clearInterval(counter); //clear counter
-        // clearInterval(counterLine); //clear counterLine
-        // startTimer(timeValue); //calling startTimer function
-        // startTimerLine(widthValue); //calling startTimerLine function
         timeText.textContent = "Time Left"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
     }else{
@@ -132,8 +126,6 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer){
-    // clearInterval(counter); //clear counter
-    // clearInterval(counterLine); //clear counterLine
     let userAns = answer.textContent; //getting user selected option
     let correcAns = questions[que_count].answer; //getting correct answer from array
     const allOptions = option_list.children.length; //getting all option items
@@ -262,13 +254,17 @@ function queCounter(index){
 
 // score local storage 
 
-
-function saveStore(theScore) {
+ function saveStore(theScore) {
     localStorage.setItem("score", theScore);
+    
     
     if (localStorage.getItem("score")) {
         let scoreText = '<p><span>YOUR SCORE IS: ' + userScore + '/' + questions.length +' !</span></p>';
         document.querySelector(".highest__score").innerHTML = scoreText; 
+       
     }
     
+    
 }
+
+
