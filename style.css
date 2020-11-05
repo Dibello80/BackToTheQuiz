@@ -573,3 +573,10 @@ footer button.show {
     color: #fff;
     background: #007bff;
 }
+
+.highest__score {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #b8a500;
+
+}

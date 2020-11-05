@@ -260,11 +260,14 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
+// score local storage 
+
+
 function saveStore(theScore) {
     localStorage.setItem("score", theScore);
     
     if (localStorage.getItem("score")) {
-        let scoreText = '<p><span>the last score saved is:' + userScore + '/' + questions.length +'</span></p>';
+        let scoreText = '<p><span>YOUR SCORE IS: ' + userScore + '/' + questions.length +' !</span></p>';
         document.querySelector(".highest__score").innerHTML = scoreText; 
     }
     
