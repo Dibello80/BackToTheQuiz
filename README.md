@@ -16,6 +16,10 @@ In the score window you have three buttons with three diffent options, "Replay",
 ## ScreenShots of the app!
 
 ![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_1.png)
+![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_2.png)
+![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_3.png)
+![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_4.png)
+![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_5.png)
 
 
 
