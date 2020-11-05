@@ -13,7 +13,7 @@ In the score window you have three buttons with three diffent options, "Replay",
 "Replay" button cliked to play another round, "Quit" to go back to the main page and if you click "Score" you can save your result to the localstorage.
 
 
-## ScreenShot of the app!
+## ScreenShots of the app!
 
 ![alt text](https://github.com/Dibello80/BackToTheQuiz/blob/main/screeshot_app/Screen%20Shot_1.png)
 
