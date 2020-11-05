@@ -1,6 +1,6 @@
 # BackToTheQuiz
 
-This application is a Theme Quiz with a timer as tribute to Back To The Future movie.
+This application is a Quiz app with a timer as tribute to Back To The Future movie.
 When the "Start Quiz" button is clicked the theme song starts and a box window will pop up explaing the main rules of the quiz (5 total).
 In this rules window we have two buttons (Exit Quiz and Continue).
 if "Exit Quiz" button is clicked the app will go back to the starting point and the music will stop instead if the "Continue" button is cliked the the Quiz game starts.
