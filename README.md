@@ -11,7 +11,7 @@ In the score window you have three buttons with three diffent options, "Replay",
 "Replay" button cliked to play another round, "Quit" to go back to the main page and "Score" if you want to store your result (localstorage).
 "Back To The Quiz" is mobile responsive. Enjoy!
 
-<strong>Play now!</strong> => : https://github.com/Dibello80/BackToTheQuiz.git
+<strong>Play now!</strong> => : https://dibello80.github.io/BackToTheQuiz/
 
 
 ## ScreenShots of the app!
