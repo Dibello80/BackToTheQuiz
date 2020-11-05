@@ -12,7 +12,7 @@ You can't exit from the Quiz while you're playing and you will get 1 point for e
 When times is out or i you have answered all five questions the quiz will stop and you will have a new window with your score result.
 In the score window you have three buttons with three diffent options, "Replay", "Quit" or "Score".
 "Replay" button cliked to play another round, "Quit" to go back to the main page and if you click "Score" you can save your result to the localstorage.
-Back To The Quiz is mobile responsive. Enjoy!
+"Back To The Quiz" is mobile responsive. Enjoy!
 
 
 ## ScreenShots of the app!
