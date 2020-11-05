@@ -15,7 +15,7 @@ In the score window you have three buttons with three diffent options, "Replay",
 
 ## ScreenShot of the app!
 
-![alt text](/screeshot_app/Screen Shot_1.png)
+![alt text](screeshot_app/Screen Shot_1.png)
 
 
 
